@@ -1,5 +1,9 @@
 public class StringLength {
 	public static int getStringLength(String s) {
-		return s.length();
+		try {
+			return s.length();
+		} catch (NullPointerException e) {
+			return 0;
+		}
 	}
 }
