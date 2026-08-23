@@ -19,6 +19,7 @@ public class CleanExtract {
 		arr = java.util.Arrays.stream(arr).filter(str -> !str.isBlank()).toArray(String[]::new);
 		String res = String.join(" ", arr);
 		res = res.replaceAll("\\s+", "\s");
+		res = res.trim();
 		return res;
 	}
 }
