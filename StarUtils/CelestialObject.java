@@ -24,7 +24,7 @@ public class CelestialObject {
 
 	// STAR UTILS
 	public String toString() {
-		return String.format("%s is postioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
+		return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
 	}
 
 	public boolean equals(CelestialObject sthis) {
