@@ -17,16 +17,15 @@ public class Star extends CelestialObject {
 	}
 
 	@Override
-	public boolean equals(Object object) {
-   	if (!(object instanceof Star)) {
-      	return false;
-    }
+	public boolean equals(Object o) {
+    	if (this == o) return true;
+    	if (o == null || getClass() != o.getClass()) return false;
+    	if (!super.equals(o)) return false; // if inheriting x, y, z from a superclass
 
-    Star other = (Star) object;
-
-    return super.equals(other) && this.magnitude == other.magnitude;
+    	Star star = (Star) o;
+    	return Double.compare(star.magnitude, magnitude) == 0;
 	}
-	
+
 	@Override
 	public String toString() {
 		return String.format("%s shines at the %.3f magnitude", getName(), this.magnitude		);
