@@ -17,12 +17,15 @@ public class Star extends CelestialObject {
 	}
 
 	
-	public boolean equals(Star object) {
-		if (!(object instanceof Star)) {
-			return false;
-		}
-		
-		return super.equals(object) && this.magnitude == object.magnitude;
+	@Override
+	public boolean equals(Object object) {
+    	if (!(object instanceof Star)) {
+        	return false;
+    	}
+
+    	Star other = (Star) object;
+
+    	return super.equals(other) && this.magnitude == other.magnitude;
 	}
 
 	@Override
