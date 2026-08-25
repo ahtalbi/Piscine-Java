@@ -28,6 +28,9 @@ public class CelestialObject {
 	}
 
 	public boolean equals(CelestialObject sthis) {
+		if (!(object instanceof CelestialObject)) {
+        	return false;
+    	}
 		return (this.x == sthis.x && this.y == sthis.y && this.z == sthis.z && this.name.equals(sthis.name));
 	}
 
