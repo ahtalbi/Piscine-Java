@@ -18,19 +18,17 @@ public class Star extends CelestialObject {
 
 	
 	@Override
-	public boolean equals(Object object) {
-    	if (!(object instanceof Star)) {
-        	return false;
-    	}
-
-    	Star other = (Star) object;
-
-    	return super.equals(other) && this.magnitude == other.magnitude;
-	}
-
+	public boolean equals(Object obj) {
+        if (obj == null || this.getClass() != obj.getClass()) {
+            return false;
+        }
+   	    Star obj1 = (Star) obj;
+	    return Double.compare(this.getX(), obj1.getX()) == 0 && Double.compare(this.getY(), obj1.getY()) == 0 && Double.compare(this.getZ(), obj1.getZ()) == 0 && this.getName().equals(obj1.getName()) && Double.compare(this.magnitude, obj1.magnitude) == 0 && obj1 != null;
+    }
+	
 	@Override
 	public String toString() {
-		return String.format("%s shines at the %.3f magnitude", getName(), this.magnitude);
+		return String.format("%s shines at the %.3f magnitude", getName(), this.magnitude		);
 	}
 
 	public double getMagnitude() {
