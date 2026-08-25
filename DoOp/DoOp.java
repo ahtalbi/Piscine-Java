@@ -3,8 +3,8 @@ public class DoOp {
 		if (args == null) {
 			return "Error";
 		}
-		if (args.length != 3) {
-			return "it depend on the input.";
+	    if (args.length != 3) {
+			return "Error";
 		}
 
 		try {
