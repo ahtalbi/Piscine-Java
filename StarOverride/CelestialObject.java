@@ -27,11 +27,13 @@ public class CelestialObject {
 		return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
 	}
 
-	public boolean equals(CelestialObject sthis) {
-		if (!(sthis instanceof CelestialObject)) {
+	@Override
+	public boolean equals(Object obj) {
+    	if (!(obj instanceof CelestialObject)) {
         	return false;
     	}
-		return (this.x == sthis.x && this.y == sthis.y && this.z == sthis.z && this.name.equals(sthis.name));
+    	CelestialObject sthis = (CelestialObject) obj;
+    	return this.x == sthis.x && this.y == sthis.y && this.z == sthis.z && this.name.equals(sthis.name);
 	}
 
 	public int hashCode() {
