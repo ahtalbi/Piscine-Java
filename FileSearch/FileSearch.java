@@ -13,9 +13,9 @@ public class FileSearch {
 				}
 			}
 		} catch (Exception e) {
-			return "";
+			return null;
 		}
 
-		return "";
+		return null;
 	}
 }
