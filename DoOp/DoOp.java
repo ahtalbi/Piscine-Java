@@ -1,6 +1,9 @@
 public class DoOp {
 	public static String operate(String[] args) {
-		if (args == null || args.length != 3) {
+		if (args == null) {
+			return "Error";
+		}
+		if (args.length != 3) {
 			return "it depend on the input.";
 		}
 
