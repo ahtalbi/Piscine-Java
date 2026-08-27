@@ -2,17 +2,17 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Galaxy {
-	private List<CelestialObject> celestialObject;
+	private List<CelestialObject> celestialObjects;
 
 	Galaxy() {
-		this.celestialObject = new ArrayList<>();
+		this.celestialObjects = new ArrayList<>();
 	}
 
 	public List<CelestialObject> getCelestialObjects() {
-		return this.celestialObject;
+		return this.celestialObjects;
 	}
 	
 	public void addCelestialObject(CelestialObject cobj) {
-		this.celestialObject.add(cobj);
+		this.celestialObjects.add(cobj);
 	}
 }
