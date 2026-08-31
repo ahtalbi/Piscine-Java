@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public abstract class Character {
 	final private String name;
 	final private int maxHealth;
-	private int currentHealth;
+	protected int currentHealth;
 	private static List<Character> allCharacters = new ArrayList<>();
 
 	public Character(String name, int maxHealth) {
@@ -27,7 +27,7 @@ public abstract class Character {
 	}
 
 	// Setters
-	public void setCurrentHealth(int ch) {
+	protected void setCurrentHealth(int ch) {
 		this.currentHealth = ch;
 	}
 
