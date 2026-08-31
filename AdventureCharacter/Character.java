@@ -9,6 +9,16 @@ public class Character {
 		this.currentHealth = maxHealth;
 	}
 
+	public String getName() {
+		return this.name;
+	}
+	public int getCurrentHealth() {
+		return this.currentHealth;
+	}
+	public int getMaxHealth() {
+		return this.maxHealth;
+	}
+
 	public String toString() {
 		if (this.currentHealth == 0) {
 			return String.format("%s : KO", this.name);
