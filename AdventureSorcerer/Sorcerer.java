@@ -6,11 +6,6 @@ public class Sorcerer extends Character implements Healer {
 		return this.healCapacity;
 	}
 
-	// Setters
-	public void setHealCapacity(int hc) {
-		this.healCapacity = hc;
-	}
-
 	public Sorcerer(String name, int maxHealth, int healCapacity) {
 		super(name, maxHealth);
 		this.healCapacity = healCapacity;
