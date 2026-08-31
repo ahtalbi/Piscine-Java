@@ -1,5 +1,5 @@
 public class Sorcerer extends Character implements Healer {
-	private int healCapacity;
+	final private int healCapacity;
 
 	// Getters
 	public int getHealCapacity() {
