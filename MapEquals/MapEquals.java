@@ -7,7 +7,7 @@ public class MapEquals {
         if (map1.size() != map2.size()) return false;
         for (Map.Entry<String, Integer> mp : map1.entrySet()) {
             if (!map2.containsKey(mp.getKey())) return false;
-            if (!entry.getValue().equals(map2.get(entry.getKey()))) return false;
+            if (!mp.getValue().equals(map2.get(mp.getKey()))) return false;
         }
         return true;
     }
