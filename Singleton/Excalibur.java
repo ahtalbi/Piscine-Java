@@ -1,6 +1,6 @@
 public class Excalibur {
 	private String name = "Sword";
-	private static Excalibur instance;
+	private static Excalibur INSTANCE;
 	
 	private Excalibur() {}
 	private Excalibur(String n) {
@@ -12,16 +12,16 @@ public class Excalibur {
 	}
 
 	public static Excalibur getInstance() {
-		if (instance == null) {
-			instance = new Excalibur();
+		if (INSTANCE == null) {
+			INSTANCE = new Excalibur();
 		};
-		return instance;
+		return INSTANCE;
 	}
 	
 	public static Excalibur getInstance(String name) {
-		if (instance == null) {
-			instance = new Excalibur(name);
+		if (INSTANCE == null) {
+			INSTANCE = new Excalibur(name);
 		};
-		return instance;
+		return INSTANCE;
 	}
 }
