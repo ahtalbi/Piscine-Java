@@ -3,6 +3,9 @@ public class Excalibur {
 	private static Excalibur instance;
 	
 	private Excalibur() {}
+	private Excalibur(String n) {
+		name = n;
+	}
 	
 	public String getName() {
 		return this.name;
@@ -11,6 +14,13 @@ public class Excalibur {
 	public static Excalibur getInstance() {
 		if (instance == null) {
 			instance = new Excalibur();
+		};
+		return instance;
+	}
+	
+	public static Excalibur getInstance(String name) {
+		if (instance == null) {
+			instance = new Excalibur(name);
 		};
 		return instance;
 	}
