@@ -1,4 +1,4 @@
-public class Context extends OperationStrategy {   
+public class Context implements OperationStrategy {   
     private OperationStrategy operationStrategy;
     public Context() {
         this.operationStrategy = new AddStrategy();

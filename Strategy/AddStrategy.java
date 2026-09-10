@@ -1,4 +1,4 @@
-public class AddStrategy extends OperationStrategy {
+public class AddStrategy implements OperationStrategy {
     public AddStrategy() {}
 
     public int execute(int a, int b) {
