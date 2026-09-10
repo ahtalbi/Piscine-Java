@@ -5,3 +5,4 @@ public class AddStrategy implements OperationStrategy {
         return a + b;
     }
 }
+
