@@ -1,6 +1,6 @@
 public class Context extends OperationStrategy {   
     private OperationStrategy operationStrategy;
-    public void Context() {
+    public Context() {
         this.operationStrategy = new AddStrategy();
     }
 
@@ -9,6 +9,7 @@ public class Context extends OperationStrategy {
     }
 
     public int execute(int a, int b) {
-        return this.operationStrategy.execute();
+        if (this.operationStrategy == null) return -1;
+        return this.operationStrategy.execute(a, b);
     }
 }
